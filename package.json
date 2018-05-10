@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "eslint src && pulp build -- --censor-lib --strict",
+    "test": "pulp test"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "pulp": "^12.2.0",
+    "purescript": "^0.11.7",
+    "purescript-psa": "^0.6.0"
+  },
+  "dependencies": {
+    "viewport-mercator-project": "^5.1.0"
+  }
+}

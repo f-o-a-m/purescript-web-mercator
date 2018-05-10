@@ -1,0 +1,29 @@
+{
+  "name": "purescript-web-mercator",
+  "license": "Apache-2.0",
+  "authors": [
+    "Irakli Safareli <i.safareli@gmail.com> (https://github.com/safareli)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/f-o-a-m/purescript-web-mercator.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-partial": "^1.2.1",
+    "purescript-prelude": "^3.3.0",
+    "purescript-functions": "^3.0.0"
+  },
+  "devDependencies": {
+    "purescript-eff": "^3.2.1",
+    "purescript-assert": "^3.1.0",
+    "purescript-record": "^0.2.6"
+  }
+}
