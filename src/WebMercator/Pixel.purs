@@ -1,4 +1,10 @@
-module WebMercator.Pixel where
+module WebMercator.Pixel
+  ( Pixel
+  , x
+  , y
+  , make
+  , approxEq
+  ) where
 
 import Prelude
 import Partial.Unsafe (unsafeCrashWith)
@@ -11,8 +17,8 @@ derive newtype instance eqPixel :: Eq Pixel
 instance showPixel :: Show Pixel where
   show p = "(Pixel.make {x: " <> show (x p) <> ", y: " <> show (y p) <> "})"
 
-approxEqPixel :: Pixel -> Pixel -> Boolean
-approxEqPixel a b = on approximateEqual x a b && on approximateEqual y a b
+approxEq :: Pixel -> Pixel -> Boolean
+approxEq a b = on approximateEqual x a b && on approximateEqual y a b
 
 x :: Pixel -> Number
 x (Pixel [x', _]) = x'

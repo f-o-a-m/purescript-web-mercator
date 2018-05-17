@@ -20,12 +20,12 @@ main = do
   log "project"
   let projected = Viewport.project vp pos
   log $ show $ projected
-  assert $ projected `Pixel.approxEqPixel` pixel
+  assert $ projected `Pixel.approxEq` pixel
 
   log "unprojected"
   let unprojected = Viewport.unproject vp pixel
   log $ show $ unprojected
-  assert $ unprojected `LngLat.approxEqLngLat` pos
+  assert $ unprojected `LngLat.approxEq` pos
 
   log "unViewport"
   assert $ Viewport.unpack vp `equal` vpR
