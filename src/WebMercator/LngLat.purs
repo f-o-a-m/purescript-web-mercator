@@ -15,6 +15,7 @@ import WebMercator.Internal (approximateEqual)
 newtype LngLat = LngLat (Array Number)
 
 derive newtype instance eqLngLat :: Eq LngLat
+derive newtype instance ordLngLat :: Ord LngLat
 instance showLngLat :: Show LngLat where
   show p = "(LngLat.make {lng: " <> show (lng p) <> ", lat: " <> show (lat p) <> "})"
 
