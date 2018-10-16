@@ -14,6 +14,7 @@ import WebMercator.Internal (approximateEqual)
 newtype Pixel = Pixel (Array Number)
 
 derive newtype instance eqPixel :: Eq Pixel
+derive newtype instance ordPixel :: Ord Pixel
 instance showPixel :: Show Pixel where
   show p = "(Pixel.make {x: " <> show (x p) <> ", y: " <> show (y p) <> "})"
 
