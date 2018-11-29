@@ -4,18 +4,17 @@ module Test.Main where
 
 import Prelude
 
-import Control.Monad.Eff (Eff)
+import Effect (Effect)
+import Effect.Console (log)
 import WebMercator.Viewport (Viewport, ViewportR)
 import WebMercator.Viewport as Viewport
 import WebMercator.Pixel (Pixel)
 import WebMercator.Pixel as Pixel
 import WebMercator.LngLat (LngLat)
 import WebMercator.LngLat as LngLat
-import Control.Monad.Eff.Console (log, CONSOLE)
-import Test.Assert (ASSERT, assert)
-import Data.Record (equal)
+import Test.Assert (assert)
 
-main :: forall eff. Eff (console :: CONSOLE, assert :: ASSERT | eff) Unit
+main :: Effect Unit
 main = do
   log "project"
   let projected = Viewport.project vp pos
@@ -28,7 +27,7 @@ main = do
   assert $ unprojected `LngLat.approxEq` pos
 
   log "unViewport"
-  assert $ Viewport.unpack vp `equal` vpR
+  assert $ Viewport.unpack vp == vpR
 
 pos :: LngLat
 pos = LngLat.make {lng: -122.43, lat: 37.75}
