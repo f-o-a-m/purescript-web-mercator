@@ -11,6 +11,6 @@
     "purescript-psa": "^0.7.0"
   },
   "dependencies": {
-    "viewport-mercator-project": "^5.1.0"
+    "@math.gl/web-mercator": "^3.2.2"
   }
 }
