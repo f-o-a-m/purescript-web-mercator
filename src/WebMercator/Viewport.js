@@ -1,5 +1,5 @@
 "use strict";
-var vmp = require("viewport-mercator-project");
+var vmp = require("@math.gl/web-mercator");
 
 exports.unpack = function(vp) {
   return {
