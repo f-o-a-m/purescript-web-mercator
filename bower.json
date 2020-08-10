@@ -17,8 +17,8 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-partial": "^2.0.0",
-    "purescript-prelude": "^4.0.0",
+    "purescript-partial": "^2.0.1",
+    "purescript-prelude": "^4.1.0",
     "purescript-functions": "^4.0.0"
   },
   "devDependencies": {
