@@ -30,5 +30,5 @@ lat :: LngLat -> Number
 lat (LngLat [_, lat']) = lat'
 lat (LngLat _) = unsafeCrashWith "Array representing LngLat must contain 2 values"
 
-make :: { lng :: Number, lat :: Number } -> LngLat
+make :: forall r. { lng :: Number, lat :: Number | r } -> LngLat
 make p = LngLat [p.lng, p.lat]
