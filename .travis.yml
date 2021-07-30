@@ -5,10 +5,9 @@ node_js: stable
 install:
   - npm install -g spago purescript
   - npm install
-  - spago build
+  - spago install
 script:
   - npm run -s build
-  - spago build
   - npm -s test
 after_success:
 - >-
