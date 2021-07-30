@@ -3,12 +3,12 @@ dist: trusty
 sudo: required
 node_js: stable
 install:
-  - npm install -g bower
+  - npm install -g spago purescript
   - npm install
-  - bower install --production
+  - spago build
 script:
   - npm run -s build
-  - bower install
+  - spago build
   - npm -s test
 after_success:
 - >-
