@@ -1,14 +1,13 @@
 language: node_js
-dist: trusty
+dist: focal
 sudo: required
 node_js: stable
 install:
-  - npm install -g bower
+  - npm install -g spago purescript
   - npm install
-  - bower install --production
+  - spago install
 script:
   - npm run -s build
-  - bower install
   - npm -s test
 after_success:
 - >-
