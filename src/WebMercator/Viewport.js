@@ -1,7 +1,7 @@
 "use strict";
-var vmp = require("@math.gl/web-mercator");
+import * as VMP from "@math.gl/web-mercator";
 
-exports.unpack = function(vp) {
+export const unpack = function(vp) {
   return {
     width: vp.width,
     height: vp.height,
@@ -13,14 +13,14 @@ exports.unpack = function(vp) {
   };
 };
 
-exports.pack = function(viewport) {
-  return new vmp.WebMercatorViewport(viewport);
+export const pack = function(viewport) {
+  return new VMP.WebMercatorViewport(viewport);
 };
 
-exports.project_ = function(vp, lnglat) {
+export const project_ = function(vp, lnglat) {
   return vp.project(lnglat);
 };
 
-exports.unproject_ = function(vp, pixel) {
+export const unproject_ = function(vp, pixel) {
   return vp.unproject(pixel);
 };
